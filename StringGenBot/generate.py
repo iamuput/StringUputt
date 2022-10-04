@@ -55,13 +55,13 @@ async def main(_, msg):
 
 async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: bool = False, is_bot: bool = False):
     if telethon:
-        ty = "ᴛᴇʟᴇᴛʜᴏɴ"
+        ty = "𝗧𝗘𝗟𝗘𝗧𝗛𝗢𝗡"
     else:
-        ty = "ᴩʏʀᴏɢʀᴀᴍ"
+        ty = "𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠"
         if not old_pyro:
-            ty += " ᴠ2"
+            ty += " 𝗩2"
     if is_bot:
-        ty += " ʙᴏᴛ"
+        ty += " 𝗕𝗢𝗧"
     await msg.reply(f"» Mencoba Memulai **{ty}** Session Generator...")
     user_id = msg.chat.id
     api_id_msg = await bot.ask(user_id, "» Memulai Proses Pembuatan...\n\nTolong Kirim **𝗔𝗣𝗜_𝗜𝗗** Anda.", filters=filters.text)
